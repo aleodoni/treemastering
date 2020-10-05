@@ -184,7 +184,7 @@ export const MenuMobile = styled.div`
     > ul {
       list-style-type: none;
       font-size: 20px;
-      width: 100%;
+      width: 92%;
       
 
       > li {
