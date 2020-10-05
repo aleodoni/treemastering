@@ -47,6 +47,7 @@ const Jobs: React.FC<IProps> = ({header, jobs}) => {
         <h1>{header}</h1>
         <ul>
           { jobs.map((job) => (
+              <>
               <li key={job.titleSlug}>
                 <Job>
                   <Link href={`/jobs/${job.titleSlug}`}>
@@ -61,6 +62,9 @@ const Jobs: React.FC<IProps> = ({header, jobs}) => {
                   </div>
                 </Job>
               </li>
+              <hr />
+              </>              
+
           ))}
         </ul>
       </Container>

@@ -21,8 +21,11 @@ export const Container = styled.div`
 
     > hr {
       border-top: 1px solid var(--color-primary);
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       width: 60%;
+      @media(max-width: 880px) {
+        width: 100%;
+      }
     }
 
     > li {
@@ -41,11 +44,20 @@ export const Job = styled.div`
   display: flex;
   flex: 1;
 
+  @media(max-width: 880px) {
+    flex-direction: column;
+  }
+
   width: 100%;
 
   > img {
     padding: 4px;
     width: 270px;
+
+    @media(max-width: 880px) {
+      width: 100%;
+    }
+
     border: 1px solid var(--color-primary);
     transition: opacity 0.4s;
     opacity: 1;
@@ -63,6 +75,10 @@ export const Job = styled.div`
 
     padding: 0 25px;
 
+    @media(max-width: 880px) {
+      padding: 20px 10px;
+    }
+
     > h1 {
       font-family: 'Ubuntu Condensed';
       color: var(--color-white);
@@ -79,7 +95,8 @@ export const Job = styled.div`
       justify-content: center;
       
       max-width: 250px;
-      margin-top: 10px;
+      width: 100%;
+      margin: 10px auto;
       padding: 10px;
       background-color: var(--color-white);
       border-radius: 4px;

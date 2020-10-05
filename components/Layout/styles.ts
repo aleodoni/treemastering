@@ -21,6 +21,7 @@ export const Wrapper = styled.div`
     /* justify-content: center; */
 
     margin: 0 auto;
+    padding: 0 20px;
     max-width: var(--max-width);
     width: 100%;
     height: 100%;
@@ -62,6 +63,11 @@ export const Header = styled.div`
     display: flex; 
     align-items: center;
     justify-content: flex-end;
+
+    @media(max-width: 880px) {
+      justify-content: center;
+    }
+
     flex: 1;
 
     max-width: var(--max-width);
@@ -103,6 +109,7 @@ export const Header = styled.div`
       max-width: var(--max-width);
       height: 100%;
       width: 100%;
+      padding: 0 20px;
 
       > img {
         transition: opacity 0.4s;
@@ -134,7 +141,16 @@ export const Header = styled.div`
             }
           }
         }
+      }
 
+      @media(max-width: 880px) {
+        > ul {
+          display: none;
+
+          > li {
+            display: none;
+          }
+        }
 
       }
     }

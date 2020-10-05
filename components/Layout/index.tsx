@@ -12,7 +12,6 @@ const Layout: React.FC = ({ children }) => {
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet" />
       </Head>
       <Wrapper>
-      
         <Header>
           <div className="socialMedia">
             <FaInstagramSquare size={24} />
