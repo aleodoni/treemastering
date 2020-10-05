@@ -6,7 +6,7 @@ import {MdShoppingCart, MdChevronLeft, MdChevronRight} from 'react-icons/md'
 
 import Layout from '../../components/Layout';
 
-import { Container, JobInfo, Navegation } from '../../components/PagesStyles/Jobs/styles';
+import { Container, JobInfo, Navigation } from '../../components/PagesStyles/Jobs/styles';
 
 import jobs from '../../public/jobs/index.json';
 import { parseISO, format } from 'date-fns';
@@ -49,10 +49,6 @@ const JobDetail: React.FC<IProps> = ({job, nextJob, previousJob}) => {
     return formattedDate;
   }, [])
 
-  const formatPrevious = useCallback((previous) => {
-    return `< ${previous}`;
-  }, [])
-
   return (
     <Layout>
       <Head>
@@ -60,39 +56,39 @@ const JobDetail: React.FC<IProps> = ({job, nextJob, previousJob}) => {
       </Head>
       <section>
       <Container>
-      <JobInfo>
-        <h1>{job.title}</h1>
-        <img src={generateImg(job.img)} />
-        <div className="info">
-          <Link href={job.buy} passHref>
-            <a>
-              <MdShoppingCart size={20}/>
-              Buy Now
-            </a>
-          </Link>
-          <span><b>{job.band}</b> - {job.title}</span>
-          <span><b>Release date:</b> {formatDate(job.releaseDate)}</span>
-          <span><b>Label:</b> {job.label}</span>
-        </div>
-      </JobInfo>
-      <Navegation>
-        {previousJob && (
-          <Link href={`/jobs/${previousJob.slug}`} passHref>
-            <a>
-              <MdChevronLeft size={20} />
-              {previousJob.title}
-            </a>
-          </Link>
-        )}
-        {nextJob && (
-          <Link href={`/jobs/${nextJob.slug}`} passHref>
-            <a>
-              {nextJob.title}
-              <MdChevronRight size={20} />
-            </a>
-          </Link>
-        )}
-      </Navegation>
+        <JobInfo>
+          <h1>{job.title}</h1>
+          <img src={generateImg(job.img)} />
+          <div className="info">
+            <Link href={job.buy} passHref>
+              <a>
+                <MdShoppingCart size={20}/>
+                Buy Now
+              </a>
+            </Link>
+            <span><b>{job.band}</b> - {job.title}</span>
+            <span><b>Release date:</b> {formatDate(job.releaseDate)}</span>
+            <span><b>Label:</b> {job.label}</span>
+          </div>
+        </JobInfo>
+        <Navigation>
+          {previousJob && (
+            <Link href={`/jobs/${previousJob.slug}`} passHref>
+              <a>
+                <MdChevronLeft size={20} />
+                {previousJob.title}
+              </a>
+            </Link>
+          )}
+          {nextJob && (
+            <Link href={`/jobs/${nextJob.slug}`} passHref>
+              <a>
+                {nextJob.title}
+                <MdChevronRight size={20} />
+              </a>
+            </Link>
+          )}
+        </Navigation>
       </Container>
       </section>
     </Layout>

@@ -140,6 +140,11 @@ export const JobInfo = styled.div`
   > img {
     padding: 4px;
     width: 400px;
+
+    @media(max-width: 880px) {
+      width: 100%;
+    }
+
     border: 1px solid var(--color-primary);
     
   }
@@ -151,6 +156,8 @@ export const JobInfo = styled.div`
 
     padding: 0 5px;
 
+    width: 100%;
+
     > span {
       margin-bottom: 15px;
     }
@@ -161,8 +168,12 @@ export const JobInfo = styled.div`
       justify-content: center;
       
       max-width: 250px;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin: 20px 0;
+
+      @media(max-width: 880px) {
+        margin: 20px auto;
+      }
+
       padding: 10px;
       background-color: var(--color-white);
       border-radius: 4px;
@@ -184,7 +195,7 @@ export const JobInfo = styled.div`
   }
 `;
 
-export const Navegation = styled.div`
+export const Navigation = styled.div`
   display: flex;
   flex: 1;
   align-items: center;
