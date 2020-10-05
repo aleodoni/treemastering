@@ -76,7 +76,7 @@ export const Header = styled.div`
     height: 54px;
     padding: 20px 0;
 
-    > svg {
+    svg {
       color: var(--color-gray);
       margin-left: 20px;
     }

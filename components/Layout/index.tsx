@@ -25,8 +25,16 @@ const Layout: React.FC = ({ children }) => {
       <Wrapper>
         <Header>
           <div className="socialMedia">
-            <FaInstagramSquare size={24} />
-            <FaFacebookSquare size={24} />
+            <Link href="http://instagram.com/treemastering" passHref>
+              <a>
+                <FaInstagramSquare size={24} />    
+              </a>
+            </Link>
+            <Link href="http://facebook.com/treemastering" passHref>
+              <a>
+                <FaFacebookSquare size={24} />
+              </a>
+            </Link>
           </div>
           <div className="menu">
             <div className="logo">
