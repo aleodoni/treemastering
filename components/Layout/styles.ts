@@ -156,3 +156,55 @@ export const Header = styled.div`
     }
   }
 `;
+
+export const MenuMobile = styled.div`
+  display: none;
+  @media(max-width: 880px) {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    width: 92%;
+
+    div.burguer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      width: 100%;
+      height: 30px;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--color-yellow);
+        opacity: 1;
+      }
+    }
+
+    > ul {
+      list-style-type: none;
+      font-size: 20px;
+      width: 100%;
+      
+
+      > li {
+        margin-left: 30px;
+        width: 100%;
+        
+        > a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--color-white);
+          width: 100%;
+          line-height: 40px;
+
+          &:hover {
+            color: var(--color-yellow);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+`;

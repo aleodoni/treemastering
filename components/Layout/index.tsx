@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import Link from 'next/link'
 import Head from 'next/head'
 import {FaInstagramSquare, FaFacebookSquare} from 'react-icons/fa';
+import {MdMenu} from 'react-icons/md';
 
-import { Container, Header, Wrapper } from './styles';
+import { Container, Header, Wrapper, MenuMobile } from './styles';
+
+
 
 const Layout: React.FC = ({ children }) => {
+  const [menu, setMenu] = useState(false);
+
+  const handleMenu = useCallback(() => {
+    setMenu((prevState) => {
+      return !prevState;
+    })
+  }, [])
+
   return (
     <Container>
       <Head>
@@ -31,6 +42,20 @@ const Layout: React.FC = ({ children }) => {
             </div>
             <img src="/images/tree-banner.jpg" alt="Home" />
           </div>
+          <MenuMobile>
+            <div className="burguer" onClick={() => handleMenu()}>
+              <MdMenu size={30}/>
+            </div>
+            { menu && (
+              <ul>
+              <li><Link href="/clients">CLIENTS</Link></li>
+              <li><Link href="/jobs">MASTERING JOBS</Link></li>
+              <li><Link href="/">SEND YOUR FILES</Link></li>
+              <li><Link href="/contact">CONTACT</Link></li>
+            </ul>
+            )}
+            
+          </MenuMobile>
         </Header>
         <main>{children}</main>
       </Wrapper>
