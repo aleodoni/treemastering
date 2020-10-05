@@ -1,0 +1,25 @@
+{
+  "header": "General Info",
+  "info": [
+    {
+      "label": "Info",
+      "link": "mailto:info@treemastering.com",
+      "labelLink": "info@treemastering.com"
+    },
+    {
+      "label": "Send",
+      "link": "mailto:send@treemastering.com",
+      "labelLink": "send@treemastering.com"
+    },
+    {
+      "label": "Facebook",
+      "link": "http://facebook.com/treemastering",
+      "labelLink": "Tree Mastering"
+    },
+    {
+      "label": "Instagram",
+      "link": "http://instagram.com/treemastering",
+      "labelLink": "Tree Mastering"
+    }
+  ]
+}

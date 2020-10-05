@@ -33,6 +33,12 @@ export const Wrapper = styled.div`
 
       margin: 20px 0;
 
+      > h1 {
+        font-family: 'Ubuntu Condensed';
+        color: var(--color-white);
+        margin: 20px 0;
+      }
+
       b {
         color: var(--color-white);
         margin-bottom: 20px;
@@ -62,7 +68,7 @@ export const Header = styled.div`
 
     width: 100%;
     height: 54px;
-    padding: 20px 0; 
+    padding: 20px 0;
 
     > svg {
       color: var(--color-gray);
@@ -120,6 +126,12 @@ export const Header = styled.div`
             font-size: 16px;
             font-family: 'Ubuntu Condensed';
             color: var(--color-white);
+            transition: opacity 0.4s;
+
+            &:hover {
+              color: var(--color-yellow);
+              /* opacity: 1; */
+            }
           }
         }
 

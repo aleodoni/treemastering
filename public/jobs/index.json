@@ -1,0 +1,133 @@
+{
+  "header": "Mastering Jobs",
+  "jobs": [
+    {
+      "title": "Wake Up",
+      "band": "Gui Boratto",
+      "releaseDate": "2020-08-07",
+      "label": "Kompakt",
+      "img": "Gui_wakeup-single.jpg",
+      "buy": "https://kompakt.fm/releases/wake_up"
+    },
+    {
+      "title": "Untenable System",
+      "band": "Komka",
+      "releaseDate": "2020-08-07",
+      "label": "IU Music",
+      "img": "komka-625x625.jpg",
+      "buy": "https://komka.bandcamp.com/album/untenable-system"
+    },
+    {
+      "title": "Freedon",
+      "band": "Victor Ruiz",
+      "releaseDate": "2020-05-25",
+      "label": "Drumcode",
+      "img": "Victor-freedom.jpg",
+      "buy": "https://www.beatport.com/release/freedom/2959267"
+    },
+    {
+      "title": "Get Around",
+      "band": "HNQO",
+      "releaseDate": "2020-03-27",
+      "label": "Playperview",
+      "img": "hnqo-get-625x625.jpg",
+      "buy": "https://hnqo.bandcamp.com/album/get-around"
+    },
+    {
+      "title": "Computer Blue",
+      "band": "Fabø",
+      "releaseDate": "2020-03-20",
+      "label": "Playperview",
+      "img": "fabo-computer-blue.jpg",
+      "buy": "https://www.beatport.com/release/computer-blue/2892948"
+    },
+    {
+      "title": "Quintana",
+      "band": "Stanccione",
+      "releaseDate": "2020-03-20",
+      "label": "Cocada Music",
+      "img": "quintana.jpg",
+      "buy": "https://www.beatport.com/release/quintana/2857960"
+    },
+    {
+      "title": "Cushion",
+      "band": "Fabø",
+      "releaseDate": "2020-02-14",
+      "label": "Playperview",
+      "img": "fabo-cushion.jpg",
+      "buy": "https://www.beatport.com/release/cushion/2852312"
+    },
+    {
+      "title": "Kaizen / Dandelion",
+      "band": "Kalil",
+      "releaseDate": "2020-02-28",
+      "label": "Step4 Records",
+      "img": "kalil-dandelion.jpg",
+      "buy": "https://www.beatport.com/release/kaizen-dandelion/2853648"
+    },
+    {
+      "title": "Bonfire",
+      "band": "Alex Stein",
+      "releaseDate": "2020-02-14",
+      "label": "Filth on Acid",
+      "img": "alex-bonfire.jpg",
+      "buy": "https://www.beatport.com/release/bonfire/2828659"
+    },
+    {
+      "title": "Lust",
+      "band": "HNQO",
+      "releaseDate": "2020-01-31",
+      "label": "Playperview",
+      "img": "hnqo-lust.jpg",
+      "buy": "https://www.beatport.com/release/lust/2823632"
+    },
+    {
+      "title": "The Fuzz",
+      "band": "Thomas Schumacher",
+      "releaseDate": "2018-11-30",
+      "label": "Noir Music",
+      "img": "TS_thefuzz.jpg",
+      "buy": "https://www.beatport.com/release/the-fuzz/2445897"
+    },
+    {
+      "title": "High Five",
+      "band": "HNQO",
+      "releaseDate": "2018-09-28",
+      "label": "Playperview",
+      "img": "HNQO-High-five.jpg",
+      "buy": "https://www.beatport.com/release/high-five-ep/2378340"
+    },
+    {
+      "title": "THE EYE OF THE BEHOLDER",
+      "band": "Victor Ruiz",
+      "releaseDate": "2018-07-13",
+      "label": "Noir Music",
+      "img": "theeynm.jpg",
+      "buy": "https://www.beatport.com/release/the-eye-of-the-beholder/2331468"
+    },
+    {
+      "title": "Pentagram",
+      "band": "Gui Boratto",
+      "releaseDate": "2018-06-15",
+      "label": "Kompakt Records",
+      "img": "pentagram_gui.jpg",
+      "buy": "https://kompaktrecords.lnk.to/PentagramFA"
+    },
+    {
+      "title": "Revolved",
+      "band": "Kalil, Any Mello",
+      "releaseDate": "2018-05-18",
+      "label": "Noir Music",
+      "img": "capa-kalil-noir-625x625.jpg",
+      "buy": "https://www.beatport.com/release/revolved/2285422"
+    },
+    {
+      "title": "Clutch",
+      "band": "Victor Ruiz",
+      "releaseDate": "2015-06-05",
+      "label": "Octopus Recordings",
+      "img": "victor-octopus.jpg",
+      "buy": "https://www.beatport.com/release/clutch/2032174"
+    }
+  ]
+}

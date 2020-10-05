@@ -25,9 +25,9 @@ const Layout: React.FC = ({ children }) => {
               </Link>
               <ul>
                 <li><Link href="/clients">CLIENTS</Link></li>
-                <li><Link href="/clients">MASTERING JOBS</Link></li>
-                <li><Link href="/clients">SEND YOUR FILES</Link></li>
-                <li><Link href="/clients">CONTACT</Link></li>
+                <li><Link href="/jobs">MASTERING JOBS</Link></li>
+                <li><Link href="/">SEND YOUR FILES</Link></li>
+                <li><Link href="/contact">CONTACT</Link></li>
               </ul>
             </div>
             <img src="/images/tree-banner.jpg" alt="Home" />

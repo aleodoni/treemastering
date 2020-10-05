@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head'
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/index';
 
 const Home: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Home: React.FC = () => {
         <title>Tree Mastering | Mastering</title>
       </Head>
       <section>
-        <b>To send your files:</b>
+        <h1>To send your files:</h1>
         <p>Upload the pre-master file in 24-bit / 44.100khz with maximum peak -6db without dithering, normalize and any process / limiting in the master channel.</p>
         <p>Formats: Wav or Aiff</p>
         <p>The track should be named as follows:</p>

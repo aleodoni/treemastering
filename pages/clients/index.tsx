@@ -4,7 +4,7 @@ import Layout from '../../components/Layout';
 
 import clients from '../../public/clients/index.json';
 
-import { Container } from './styles';
+import { Container } from '../../components/PagesStyles/Clients/styles';
 
 const Clients: React.FC = () => {
   return (
