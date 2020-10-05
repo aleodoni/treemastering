@@ -18,6 +18,8 @@ export const Container = styled.div`
     justify-content: space-around;
     
     list-style-type: none;
+    width: 100%;
+    
 
     > hr {
       border-top: 1px solid var(--color-primary);
@@ -31,6 +33,8 @@ export const Container = styled.div`
     > li {
       display: flex;
       flex: 1;
+
+      width: 100%;
       margin-right: 40px;
       margin-bottom: 20px;
       color: var(--color-white);
@@ -70,10 +74,12 @@ export const Job = styled.div`
 
   div.info {
     display: flex;
+    flex: 1;
     justify-content: center;
     flex-direction: column;
 
     padding: 0 25px;
+    width: 100%;
 
     @media(max-width: 880px) {
       padding: 20px 10px;
@@ -96,7 +102,12 @@ export const Job = styled.div`
       
       max-width: 250px;
       width: 100%;
-      margin: 10px auto;
+
+      margin: 10px;
+
+      @media(max-width: 880px) {
+        margin: 10px auto;
+      }
       padding: 10px;
       background-color: var(--color-white);
       border-radius: 4px;
