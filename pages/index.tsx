@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         <p>Formats: Wav or Aiff</p>
         <p>The track should be named as follows:</p>
         <p>“Artist – track name (Original, remix, etc) NM”</p>
-        <p>Send the pre-master file link to <b>send@treemastering.com</b></p>
+        <p>Send the pre-master file link to <b>treemastering@gmail.com</b></p>
         <p>We will be reviewing the mix, if there are corrections to be made we’ll report to you one time so you can re-leveling and correct the mix.</p>
       </section>
     </Layout>
