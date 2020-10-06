@@ -6,16 +6,20 @@ const flexBox = `
 `
 
 export const Container = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox; 
   display: flex;
-  display: -webkit-flex;
 
   height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 `;
 
 export const Wrapper = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox; 
   display: flex;
-  display: -webkit-flex;
 
   flex-direction: column; 
   -webkit-box-orient: vertical;
@@ -26,8 +30,9 @@ export const Wrapper = styled.div`
   width: 100%;
 
   div.main {
+    display: -webkit-box;
+    display: -ms-flexbox; 
     display: flex;
-    display: -webkit-flex;
 
     flex-direction: column;
     -webkit-box-orient: vertical;
@@ -45,8 +50,10 @@ export const Wrapper = styled.div`
     background-size: cover; */
 
     div.section {
+      display: -webkit-box;
+      display: -ms-flexbox; 
       display: flex;
-      display: -webkit-flex;
+
       flex-direction: column;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -74,8 +81,9 @@ export const Wrapper = styled.div`
 `;
 
 export const Header = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox; 
   display: flex;
-  display: -webkit-flex;
 
   flex-direction: column;
   -webkit-box-orient: vertical;
@@ -91,8 +99,9 @@ export const Header = styled.div`
   -ms-flex-align: center;
 
   .socialMedia {
+    display: -webkit-box;
+    display: -ms-flexbox; 
     display: flex;
-    display: -webkit-flex;
 
     align-items: center;
     -webkit-box-align: center;
@@ -125,8 +134,9 @@ export const Header = styled.div`
   }
 
   .menu {
+    display: -webkit-box;
+    display: -ms-flexbox; 
     display: flex;
-    display: -webkit-flex;
 
     align-items: center;
     -webkit-box-align: center;
@@ -155,8 +165,9 @@ export const Header = styled.div`
     }
 
     .logo {
+      display: -webkit-box;
+      display: -ms-flexbox; 
       display: flex;
-      display: -webkit-flex;
 
       align-items: center;
       -webkit-box-align: center;
@@ -181,8 +192,9 @@ export const Header = styled.div`
       }
 
       > ul {
+        display: -webkit-box;
+        display: -ms-flexbox; 
         display: flex;
-        display: -webkit-flex;
 
         flex-wrap: initial;
         -ms-flex-wrap: initial;
@@ -231,8 +243,9 @@ export const MenuMobile = styled.div`
   display: none;
 
   @media(max-width: 880px) {
+    display: -webkit-box;
+    display: -ms-flexbox; 
     display: flex;
-    display: -webkit-flex;
 
     flex-direction: column;
     -webkit-box-orient: vertical;
@@ -246,8 +259,9 @@ export const MenuMobile = styled.div`
     width: 92%;
 
     div.burguer {
+      display: -webkit-box;
+      display: -ms-flexbox; 
       display: flex;
-      display: -webkit-flex;
 
       align-items: center;
       -webkit-box-align: center;
@@ -278,8 +292,9 @@ export const MenuMobile = styled.div`
         width: 100%;
         
         > a {
+          display: -webkit-box;
+          display: -ms-flexbox; 
           display: flex;
-          display: -webkit-flex;
 
           align-items: center;
           -webkit-box-align: center;
