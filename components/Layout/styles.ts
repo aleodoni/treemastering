@@ -83,7 +83,7 @@ export const Header = styled.div`
   }
 
   .menu {
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
@@ -92,7 +92,7 @@ export const Header = styled.div`
     background: url('/images/header_bg.png');
 
     width: 100%;
-    min-height: 800px;
+    min-height: 100%;
     padding: 20px 0; 
 
     > img {
