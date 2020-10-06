@@ -92,7 +92,7 @@ export const Header = styled.div`
     background: url('/images/header_bg.png');
 
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     padding: 20px 0; 
 
     > img {
@@ -109,7 +109,7 @@ export const Header = styled.div`
       justify-content: space-between;
 
       max-width: var(--max-width);
-      height: 100%;
+      min-height: 100%;
       width: 100%;
       padding: 0 20px;
 
