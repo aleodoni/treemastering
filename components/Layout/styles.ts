@@ -1,21 +1,28 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+const flexBox = `
   display: flex;
+  display: -webkit-flexbox;
+`
+
+export const Container = styled.div`
+  ${flexBox};
 
   height: 100%;
   justify-content: center;
 `;
 
 export const Wrapper = styled.div`
-  display: flex;
+  ${flexBox};
+
   flex-direction: column; 
 
   height: 100vh;
   width: 100%;
 
   div.main {
-    display: flex;
+    ${flexBox};
+
     flex-direction: column;
     /* align-items: center; */
     /* justify-content: center; */
@@ -29,7 +36,7 @@ export const Wrapper = styled.div`
     background-size: cover; */
 
     div.section {
-      display: flex;
+      ${flexBox};
       flex-direction: column;
 
       margin: 20px 0;
@@ -54,13 +61,13 @@ export const Wrapper = styled.div`
 `;
 
 export const Header = styled.div`
-  display: flex;
+  ${flexBox};
   flex-direction: column;
   flex: 1;
   align-items: center;
 
   .socialMedia {
-    display: flex; 
+    ${flexBox};
     align-items: center;
     justify-content: flex-end;
 
@@ -83,7 +90,7 @@ export const Header = styled.div`
   }
 
   .menu {
-    display: flex; 
+    ${flexBox};
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
@@ -102,7 +109,7 @@ export const Header = styled.div`
     }
 
     .logo {
-      display: flex; 
+      ${flexBox};
       align-items: center;
       justify-content: space-between;
 
@@ -121,7 +128,7 @@ export const Header = styled.div`
       }
 
       > ul {
-        display: flex;
+        ${flexBox};
         flex-wrap: initial;
         align-items: center;
         justify-content: center;
@@ -160,14 +167,14 @@ export const Header = styled.div`
 export const MenuMobile = styled.div`
   display: none;
   @media(max-width: 880px) {
-    display: flex;
+    ${flexBox};
     flex-direction: column;
     align-self: center;
 
     width: 92%;
 
     div.burguer {
-      display: flex;
+      ${flexBox};
       align-items: center;
       justify-content: flex-end;
 
@@ -192,7 +199,7 @@ export const MenuMobile = styled.div`
         width: 100%;
         
         > a {
-          display: flex;
+          ${flexBox};
           align-items: center;
           justify-content: center;
           color: var(--color-white);
