@@ -172,7 +172,7 @@ export const Header = styled.div`
   }
 `;
 
-export const MenuMobile = styled.div`
+export const MenuMobile = styled.span`
   visibility: hidden;
 
   @media(max-width: 880px) {
@@ -181,6 +181,7 @@ export const MenuMobile = styled.div`
     display: flex;
     flex-direction: column;
     align-self: center;
+    position: relative;
 
     width: 92%;
 
