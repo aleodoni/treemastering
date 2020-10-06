@@ -42,7 +42,7 @@ const Layout: React.FC = ({ children }) => {
                 <img src="/images/logo_logo_tree_mastering-site.png" alt="Home" />
               </Link>
               <ul>
-                <li><Link href="/clients">CLIENTS</Link></li>
+                <li><Link href="/clients">CLIENTSS</Link></li>
                 <li><Link href="/jobs">MASTERING JOBS</Link></li>
                 <li><Link href="/">SEND YOUR FILES</Link></li>
                 <li><Link href="/contact">CONTACT</Link></li>
