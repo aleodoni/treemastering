@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  display: -webkit-box; 
 
   height: 100%;
   justify-content: center;
@@ -9,6 +10,7 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
+  display: -webkit-box; 
 
   flex-direction: column; 
 
@@ -18,6 +20,7 @@ export const Wrapper = styled.div`
 
   div.main {
     display: flex;
+    display: -webkit-box; 
 
     flex-direction: column;
 
@@ -31,6 +34,7 @@ export const Wrapper = styled.div`
 
     div.section {
       display: flex;
+      display: -webkit-box; 
       flex-direction: column;
 
       margin: 20px 0;
@@ -56,12 +60,15 @@ export const Wrapper = styled.div`
 
 export const Header = styled.div`
   display: flex;
+  display: -webkit-box; 
+
   flex-direction: column;
   flex: 1;
   align-items: center;
 
   .socialMedia {
     display: flex;
+    display: -webkit-box; 
     align-items: center;
     justify-content: flex-end;
     flex: 1;
@@ -84,6 +91,7 @@ export const Header = styled.div`
 
   .menu {
     display: flex;
+    display: -webkit-box; 
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
@@ -104,6 +112,7 @@ export const Header = styled.div`
 
     .logo {
       display: flex;
+      display: -webkit-box; 
       flex: 1;
       align-items: center;
       justify-content: space-between;
@@ -124,6 +133,7 @@ export const Header = styled.div`
 
       > ul {
         display: flex;
+        display: -webkit-box; 
         flex-wrap: initial;
         align-items: center;
         justify-content: center;
@@ -168,6 +178,7 @@ export const MenuMobile = styled.div`
   @media(max-width: 880px) {
     visibility: visible;
     display: flex;
+    display: -webkit-box; 
     flex-direction: column;
     align-self: center;
 
@@ -175,6 +186,7 @@ export const MenuMobile = styled.div`
 
     div.burguer {
       display: flex;
+      display: -webkit-box; 
       align-items: center;
       justify-content: flex-end;
 
@@ -200,6 +212,7 @@ export const MenuMobile = styled.div`
         
         > a {
           display: flex;
+          display: -webkit-box; 
           align-items: center;
           justify-content: center;
 
