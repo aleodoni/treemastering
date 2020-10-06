@@ -127,10 +127,12 @@ export const Header = styled.div`
         flex-wrap: initial;
         align-items: center;
         justify-content: center;
+        visibility: visible;
 
         list-style-type: none;
 
         > li {
+          visibility: visible;
           margin-left: 30px;
           > a {
             font-size: 16px;
@@ -164,6 +166,7 @@ export const MenuMobile = styled.div`
   visibility: hidden;
 
   @media(max-width: 880px) {
+    visibility: visible;
     display: flex;
     flex-direction: column;
     align-self: center;
