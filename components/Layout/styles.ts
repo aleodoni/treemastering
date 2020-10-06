@@ -83,7 +83,7 @@ export const Header = styled.div`
   }
 
   .menu {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
