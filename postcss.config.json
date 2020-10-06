@@ -5,8 +5,8 @@
       "postcss-preset-env",
       {
         "autoprefixer": {
-          "browsers": ["last 4 versions", "iOS >= 4", "Android >= 4"],
-          "flexbox": "no-2009"
+          "browsers": ["0.2%"],
+          "flexbox": "true"
         },
         "stage": 3,
         "features": {
