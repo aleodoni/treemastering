@@ -65,7 +65,7 @@ const Layout: React.FC = ({ children }) => {
             
           </MenuMobile>
         </Header>
-        <main>{children}</main>
+        <div className="main">{children}</div>
       </Wrapper>
     </Container>
   )
