@@ -4,7 +4,7 @@ const withSass = require('@zeit/next-sass')
 const withImages = require('next-images')
 
 const nextConfig = {
-	useFileSystemPublicRoutes: false,
+	useFileSystemPublicRoutes: true,
 	webpack: (config) => {
 		config.node = {
 			fs: 'empty',

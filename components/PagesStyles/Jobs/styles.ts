@@ -20,9 +20,9 @@ export const Container = styled.div`
     width: 100%;
     
 
-    > hr {
+    hr {
       border-top: 1px solid var(--color-primary);
-      margin-bottom: 30px;
+      margin: 30px 0;
       width: 60%;
       @media(max-width: 880px) {
         width: 100%;
@@ -98,15 +98,17 @@ export const Job = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+      /* align-self: flex-start; */
       
-      max-width: 250px;
+      max-width: 200px;
       width: 100%;
 
-      margin: 10px;
+      /* margin: 10px; */
 
       @media(max-width: 880px) {
         margin: 10px auto;
       }
+      
       padding: 10px;
       background-color: var(--color-white);
       border-radius: 4px;

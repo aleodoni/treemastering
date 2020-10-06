@@ -47,8 +47,8 @@ const Jobs: React.FC<IProps> = ({header, jobs}) => {
         <h1>{header}</h1>
         <ul>
           { jobs.map((job) => (
-              <>
-              <li key={job.titleSlug}>
+            <div key={job.titleSlug}>
+              <li>
                 <Job>
                   <Link href={`/jobs/${job.titleSlug}`}>
                     <img src={generateImg(job.img)} />
@@ -63,7 +63,7 @@ const Jobs: React.FC<IProps> = ({header, jobs}) => {
                 </Job>
               </li>
               <hr />
-              </>              
+            </div>              
 
           ))}
         </ul>
