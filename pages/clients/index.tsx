@@ -12,7 +12,7 @@ const Clients: React.FC = () => {
       <Head>
         <title>Tree Mastering | Clients</title>
       </Head>
-      <section>
+      <div className="section">
       <Container>
         <h1>Clients</h1>
         <ul>
@@ -21,7 +21,7 @@ const Clients: React.FC = () => {
           ))}
         </ul>
       </Container>
-      </section>
+      </div>
     </Layout>
   )
 }

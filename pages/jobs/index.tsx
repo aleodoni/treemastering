@@ -42,7 +42,7 @@ const Jobs: React.FC<IProps> = ({header, jobs}) => {
       <Head>
         <title>Tree Mastering | Contact</title>
       </Head>
-      <section>
+      <div className="section">
       <Container>
         <h1>{header}</h1>
         <ul>
@@ -68,7 +68,7 @@ const Jobs: React.FC<IProps> = ({header, jobs}) => {
           ))}
         </ul>
       </Container>
-      </section>
+      </div>
     </Layout>
   );
 }

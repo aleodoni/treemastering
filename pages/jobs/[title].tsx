@@ -54,7 +54,7 @@ const JobDetail: React.FC<IProps> = ({job, nextJob, previousJob}) => {
       <Head>
         <title>Tree Mastering | Contact</title>
       </Head>
-      <section>
+      <div className="section">
       <Container>
         <JobInfo>
           <h1>{job.title}</h1>
@@ -90,7 +90,7 @@ const JobDetail: React.FC<IProps> = ({job, nextJob, previousJob}) => {
           )}
         </Navigation>
       </Container>
-      </section>
+      </div>
     </Layout>
   );
 }

@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
     /* background: url('/images/header_bg.png'); 
     background-size: cover; */
 
-    section {
+    div.section {
       display: flex;
       flex-direction: column;
 
