@@ -161,9 +161,9 @@ export const Header = styled.div`
 `;
 
 export const MenuMobile = styled.div`
-  display: none;
+  /* display: none; */
 
-  @media(max-width: 880px) {
+  /* @media(max-width: 880px) { */
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -171,7 +171,7 @@ export const MenuMobile = styled.div`
     width: 92%;
 
     div.burguer {
-      display: block;
+      display: flex;
       align-items: center;
       justify-content: flex-end;
 
@@ -183,7 +183,7 @@ export const MenuMobile = styled.div`
         color: var(--color-yellow);
         opacity: 1;
       }
-    }
+    /* } */
 
     > ul {
       list-style-type: none;
