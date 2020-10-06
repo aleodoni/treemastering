@@ -171,7 +171,7 @@ export const MenuMobile = styled.div`
     width: 92%;
 
     div.burguer {
-      display: flex;
+      display: block;
       align-items: center;
       justify-content: flex-end;
 
