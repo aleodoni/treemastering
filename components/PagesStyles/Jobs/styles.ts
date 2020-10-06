@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 
   > h1 {
@@ -11,10 +17,20 @@ export const Container = styled.div`
   }
 
   > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-    /* align-items: center; */
+
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     
     list-style-type: none;
@@ -31,7 +47,12 @@ export const Container = styled.div`
     }
 
     > li {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
       flex: 1;
 
       width: 100%;
@@ -45,10 +66,18 @@ export const Container = styled.div`
 `;
 
 export const Job = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 
   @media(max-width: 880px) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -73,9 +102,21 @@ export const Job = styled.div`
   }
 
   div.info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 
     padding: 0 25px;
@@ -96,8 +137,16 @@ export const Job = styled.div`
     }
     
     > a {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       
       max-width: 250px;
@@ -125,8 +174,17 @@ export const Job = styled.div`
 `;
 
 export const JobInfo = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 
   width: 100%;
@@ -150,8 +208,17 @@ export const JobInfo = styled.div`
   }
 
   div.info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 
     padding: 0 5px;
@@ -163,8 +230,16 @@ export const JobInfo = styled.div`
     }
 
     > a {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       
       max-width: 250px;
@@ -196,9 +271,20 @@ export const JobInfo = styled.div`
 `;
 
 export const Navigation = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 
   margin-top: 20px;
@@ -206,7 +292,12 @@ export const Navigation = styled.div`
   width: 100%;
 
   > a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     > svg {
