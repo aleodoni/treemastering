@@ -178,7 +178,7 @@ export const MenuMobile = styled.span`
   @media(max-width: 880px) {
     visibility: visible;
     display: -webkit-box; 
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     align-self: center;
     position: relative;
