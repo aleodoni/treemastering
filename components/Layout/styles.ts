@@ -148,10 +148,10 @@ export const Header = styled.div`
 
       @media(max-width: 880px) {
         > ul {
-          display: none;
+          visibility: hidden;
 
           > li {
-            display: none;
+            visibility: hidden;
           }
         }
 
@@ -161,9 +161,9 @@ export const Header = styled.div`
 `;
 
 export const MenuMobile = styled.div`
-  /* display: none; */
+  visibility: hidden;
 
-  /* @media(max-width: 880px) { */
+  @media(max-width: 880px) {
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -183,7 +183,7 @@ export const MenuMobile = styled.div`
         color: var(--color-yellow);
         opacity: 1;
       }
-    /* } */
+    }
 
     > ul {
       list-style-type: none;
