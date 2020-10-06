@@ -92,7 +92,7 @@ export const Header = styled.div`
     background: url('/images/header_bg.png');
 
     width: 100%;
-    min-height: 100%;
+    min-height: 800px;
     padding: 20px 0; 
 
     > img {
