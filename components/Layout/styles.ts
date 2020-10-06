@@ -87,6 +87,7 @@ export const Header = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    flex: 1;
 
     background: url('/images/header_bg.png');
 
@@ -103,6 +104,7 @@ export const Header = styled.div`
 
     .logo {
       display: flex;
+      flex: 1;
       align-items: center;
       justify-content: space-between;
 
