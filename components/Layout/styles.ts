@@ -12,7 +12,8 @@ export const Wrapper = styled.div`
 
   flex-direction: column; 
 
-  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   width: 100%;
 
   div.main {

@@ -56,7 +56,7 @@ const Layout: React.FC = ({ children }) => {
             </div>
             { menu && (
               <ul>
-              <li><Link href="/clients">CLIENTS.</Link></li>
+              <li><Link href="/clients">CLIENTS</Link></li>
               <li><Link href="/jobs">MASTERING JOBS</Link></li>
               <li><Link href="/">SEND YOUR FILES</Link></li>
               <li><Link href="/contact">CONTACT</Link></li>
