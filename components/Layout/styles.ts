@@ -1,45 +1,24 @@
 import styled from 'styled-components';
 
-const flexBox = `
-  display: flex;
-  display: -webkit-flex;
-`
-
 export const Container = styled.div`
-  display: -webkit-box;
-  display: -ms-flexbox; 
   display: flex;
 
   height: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 `;
 
 export const Wrapper = styled.div`
-  display: -webkit-box;
-  display: -ms-flexbox; 
   display: flex;
 
   flex-direction: column; 
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
 
   height: 100vh;
   width: 100%;
 
   div.main {
-    display: -webkit-box;
-    display: -ms-flexbox; 
     display: flex;
 
     flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
 
     margin: 0 auto;
     padding: 0 20px;
@@ -50,14 +29,8 @@ export const Wrapper = styled.div`
     background-size: cover; */
 
     div.section {
-      display: -webkit-box;
-      display: -ms-flexbox; 
       display: flex;
-
       flex-direction: column;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
 
       margin: 20px 0;
 
@@ -81,45 +54,20 @@ export const Wrapper = styled.div`
 `;
 
 export const Header = styled.div`
-  display: -webkit-box;
-  display: -ms-flexbox; 
   display: flex;
-
   flex-direction: column;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-
   flex: 1;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-
   align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
 
   .socialMedia {
-    display: -webkit-box;
-    display: -ms-flexbox; 
     display: flex;
-
     align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-
     justify-content: flex-end;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
+    flex: 1;
 
     @media(max-width: 880px) {
       justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
     }
-
-    flex: 1;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
 
     max-width: var(--max-width);
 
@@ -134,22 +82,10 @@ export const Header = styled.div`
   }
 
   .menu {
-    display: -webkit-box;
-    display: -ms-flexbox; 
     display: flex;
-
     align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-
     justify-content: space-between;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-
     flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
 
     background: url('/images/header_bg.png');
 
@@ -165,17 +101,9 @@ export const Header = styled.div`
     }
 
     .logo {
-      display: -webkit-box;
-      display: -ms-flexbox; 
       display: flex;
-
       align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-
       justify-content: space-between;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
 
       max-width: var(--max-width);
       height: 100%;
@@ -192,20 +120,10 @@ export const Header = styled.div`
       }
 
       > ul {
-        display: -webkit-box;
-        display: -ms-flexbox; 
         display: flex;
-
         flex-wrap: initial;
-        -ms-flex-wrap: initial;
-
         align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-
         justify-content: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
 
         list-style-type: none;
 
@@ -243,33 +161,16 @@ export const MenuMobile = styled.div`
   display: none;
 
   @media(max-width: 880px) {
-    display: -webkit-box;
-    display: -ms-flexbox; 
     display: flex;
-
     flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-
     align-self: center;
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
 
     width: 92%;
 
     div.burguer {
-      display: -webkit-box;
-      display: -ms-flexbox; 
       display: flex;
-
       align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-
       justify-content: flex-end;
-      -webkit-box-pack: end;
-      -ms-flex-pack: end;
 
       width: 100%;
       height: 30px;
@@ -292,17 +193,9 @@ export const MenuMobile = styled.div`
         width: 100%;
         
         > a {
-          display: -webkit-box;
-          display: -ms-flexbox; 
           display: flex;
-
           align-items: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-
           justify-content: center;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
 
           color: var(--color-white);
           width: 100%;
