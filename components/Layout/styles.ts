@@ -84,7 +84,7 @@ export const Header = styled.div`
   }
 
   .menu {
-    display: inline-block;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
@@ -104,7 +104,7 @@ export const Header = styled.div`
     }
 
     .logo {
-      display: inline-block;
+      display: flex;
       flex: 1;
       align-items: center;
       justify-content: space-between;
@@ -124,7 +124,7 @@ export const Header = styled.div`
       }
 
       > ul {
-        display: inline-block;
+        display: flex;
         flex-wrap: initial;
         align-items: center;
         justify-content: center;
