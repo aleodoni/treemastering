@@ -4,6 +4,8 @@ import Link from 'next/link';
 import next, { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
 import {MdShoppingCart, MdChevronLeft, MdChevronRight} from 'react-icons/md'
 
+import { formatSlug } from '../../lib/format';
+
 import Layout from '../../components/Layout';
 
 import { Container, JobInfo, Navigation } from '../../components/PagesStyles/Jobs/styles';
@@ -101,7 +103,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const formattedJobs = jobs.jobs.map(job => {
     return {
       ...job,
-      titleSlug: job.title.replace(/\s+/g, ''),
+      titleSlug: formatSlug(job.title),
     }
   })
 
@@ -138,7 +140,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const jobTitles = jobs.jobs.map(job => {
-    return { params: { title: job.title.replace(/\s+/g, '') } }
+    return { params: { title: formatSlug(job.title) } }
   });
 
   return  {

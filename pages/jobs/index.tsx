@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Link from 'next/link';
 import {format, parseISO} from 'date-fns';
 
+import { formatSlug } from '../../lib/format';
+
 import Layout from '../../components/Layout';
 
 import jobs from '../../public/jobs/index.json';
@@ -76,10 +78,11 @@ const Jobs: React.FC<IProps> = ({header, jobs}) => {
 export default Jobs;
 
 export const getStaticProps: GetStaticProps = async () => {
+  
   const formattedJobs = jobs.jobs.map(job => {
     return {
       ...job,
-      titleSlug: job.title.replace(/\s+/g, ''),
+      titleSlug: formatSlug(job.title),
     }
   })
 
