@@ -2,38 +2,37 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: inline-block;
+  text-align: center;
 
+  width: 100%;
   height: 100%;
-  justify-content: center;
 `;
 
 export const Wrapper = styled.div`
   display: inline-block;
 
-  flex-direction: column; 
-
   min-height: 100vh;
-  min-height: -webkit-fill-available;
   width: 100%;
 
   div.main {
     display: inline-block;
+    text-align: justify;
 
-    flex-direction: column;
-
-    margin: 0 auto;
-    padding: 0 20px;
-    max-width: var(--max-width);
     width: 100%;
     height: 100%;
-    /* background: url('/images/header_bg.png'); 
-    background-size: cover; */
+
+    max-width: var(--max-width);
 
     div.section {
       display: inline-block;
       flex-direction: column;
+      max-width: var(--max-width);
 
-      margin: 20px 0;
+      @media(max-width: 880px) {
+        margin: 0 20px;
+      }
+
+      /* margin: 20px 0; */
 
       > h1 {
         font-family: 'Ubuntu Condensed';
@@ -57,25 +56,26 @@ export const Wrapper = styled.div`
 export const Header = styled.div`
   display: inline-block;
 
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
 
   .socialMedia {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex: 1;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: end;
 
-    @media(max-width: 880px) {
-      justify-content: center;
-    }
+    padding: 20px 0;
 
     max-width: var(--max-width);
-
     width: 100%;
-    height: 54px;
-    padding: 20px 0;
+
+    @media(max-width: 880px) {
+      text-align: center;
+    }
+
+    
+    /* padding: 20px 0; */
 
     svg {
       color: var(--color-gray);
@@ -84,11 +84,8 @@ export const Header = styled.div`
   }
 
   .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    flex: 1;
+    display: inline-block;
+    vertical-align: middle;
 
     background: url('/images/header_bg.png');
 
@@ -104,59 +101,77 @@ export const Header = styled.div`
     }
 
     .logo {
-      display: flex;
-      flex: 1;
-      align-items: center;
-      justify-content: space-between;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
 
       max-width: var(--max-width);
-      min-height: 100%;
       width: 100%;
+      height: 140px;
       padding: 0 20px;
 
-      > img {
-        transition: opacity 0.4s;
+      div.logoImg {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        width: 50%;
 
-        &:hover {
-          cursor: pointer;
-          opacity: 0.6;
+        > img {
+          transition: opacity 0.4s;
+
+          &:hover {
+            cursor: pointer;
+            opacity: 0.6;
+          }
         }
       }
 
-      > ul {
-        display: flex;
-        flex-wrap: initial;
-        align-items: center;
-        justify-content: center;
+      div.logoMenu {
+        display: inline-block;
+        width: 50%;
+        height: 140px;
         visibility: visible;
 
-        list-style-type: none;
-
-        > li {
+        > ul {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 100%;
+          
           visibility: visible;
-          margin-left: 30px;
-          > a {
-            font-size: 16px;
-            font-family: 'Ubuntu Condensed';
-            color: var(--color-white);
-            transition: opacity 0.4s;
 
-            &:hover {
-              color: var(--color-yellow);
-              /* opacity: 1; */
+          list-style-type: none;
+
+          > li {
+            visibility: visible;
+            
+            > a {
+              font-size: 16px;
+              font-family: 'Ubuntu Condensed';
+              color: var(--color-white);
+              transition: opacity 0.4s;
+
+              &:hover {
+                color: var(--color-yellow);
+                /* opacity: 1; */
+              }
             }
           }
         }
       }
 
       @media(max-width: 880px) {
-        > ul {
+        div.logoMenu {
+          visibility: hidden;
+          > ul {
           visibility: hidden;
 
           > li {
             visibility: hidden;
           }
         }
+        }
+        
 
       }
     }
@@ -169,16 +184,12 @@ export const MenuMobile = styled.span`
   @media(max-width: 880px) {
     visibility: visible;
     display: inline-block;
-    flex-direction: column;
-    align-self: center;
-    position: relative;
 
     width: 92%;
 
     div.burguer {
       display: inline-block;
-      align-items: center;
-      justify-content: flex-end;
+      text-align: end;
 
       width: 100%;
       height: 30px;

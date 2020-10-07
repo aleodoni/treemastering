@@ -38,33 +38,37 @@ const Layout: React.FC = ({ children }) => {
           </div>
           <div className="menu">
             <div className="logo">
-              <Link href="/">
-                <img src="/images/logo_logo_tree_mastering-site.png" alt="Home" />
-              </Link>
-              <ul>
-                <li><Link href="/clients">CLIENTS.</Link></li>
-                <li><Link href="/jobs">MASTERING JOBS</Link></li>
-                <li><Link href="/">SEND YOUR FILES</Link></li>
-                <li><Link href="/contact">CONTACT</Link></li>
-              </ul>
+              <div className="logoImg">
+                <Link href="/">
+                  <img src="/images/logo_logo_tree_mastering-site.png" alt="Home" />
+                </Link>
+              </div>
+              <div className="logoMenu">
+                <ul>
+                  <li><Link href="/clients">CLIENTS</Link></li>
+                  <li><Link href="/jobs">MASTERING JOBS</Link></li>
+                  <li><Link href="/">SEND YOUR FILES</Link></li>
+                  <li><Link href="/contact">CONTACT</Link></li>
+                </ul>
+              </div>
             </div>
             <img src="/images/tree-banner.jpg" alt="Home" />
           </div>
-          <MenuMobile>
-            <div className="burguer" onClick={() => handleMenu()}>
-              <MdMenu size={30}/>
-            </div>
-            { menu && (
-              <ul>
-              <li><Link href="/clients">CLIENTS</Link></li>
-              <li><Link href="/jobs">MASTERING JOBS</Link></li>
-              <li><Link href="/">SEND YOUR FILES</Link></li>
-              <li><Link href="/contact">CONTACT</Link></li>
-            </ul>
-            )}
-            
-          </MenuMobile>
         </Header>
+        <MenuMobile>
+          <div className="burguer" onClick={() => handleMenu()}>
+            <MdMenu size={30}/>
+          </div>
+          { menu && (
+            <ul>
+            <li><Link href="/clients">CLIENTS</Link></li>
+            <li><Link href="/jobs">MASTERING JOBS</Link></li>
+            <li><Link href="/">SEND YOUR FILES</Link></li>
+            <li><Link href="/contact">CONTACT</Link></li>
+          </ul>
+          )}
+          
+        </MenuMobile>
         <div className="main">{children}</div>
       </Wrapper>
     </Container>

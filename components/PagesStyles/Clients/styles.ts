@@ -1,27 +1,19 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: -webkit-box; 
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
 
   > h1 {
     font-family: 'Ubuntu Condensed';
     color: var(--color-white);
-    margin: 20px 0;
+    margin: 20px 0 30px;
   }
 
   > ul {
-    display: -webkit-box; 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
     list-style-type: none;
 
     > li {
-      margin-right: 40px;
+      margin-left: 20px;
       margin-bottom: 20px;
       color: var(--color-white);
       font-size: 20px;
