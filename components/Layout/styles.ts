@@ -1,16 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: -webkit-box; 
-  display: flex; 
+  display: inline-block;
 
   height: 100%;
   justify-content: center;
 `;
 
 export const Wrapper = styled.div`
-  display: -webkit-box; 
-  display: flex;
+  display: inline-block;
 
   flex-direction: column; 
 
@@ -19,8 +17,7 @@ export const Wrapper = styled.div`
   width: 100%;
 
   div.main {
-    display: -webkit-box; 
-    display: flex;
+    display: inline-block;
 
     flex-direction: column;
 
@@ -33,8 +30,7 @@ export const Wrapper = styled.div`
     background-size: cover; */
 
     div.section {
-      display: -webkit-box; 
-      display: flex;
+      display: inline-block;
       flex-direction: column;
 
       margin: 20px 0;
@@ -59,16 +55,14 @@ export const Wrapper = styled.div`
 `;
 
 export const Header = styled.div`
-  display: -webkit-box; 
-  display: flex;
+  display: inline-block;
 
   flex-direction: column;
   flex: 1;
   align-items: center;
 
   .socialMedia {
-    display: -webkit-box; 
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: flex-end;
     flex: 1;
@@ -90,8 +84,7 @@ export const Header = styled.div`
   }
 
   .menu {
-    display: -webkit-box; 
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
@@ -111,8 +104,7 @@ export const Header = styled.div`
     }
 
     .logo {
-      display: -webkit-box; 
-      display: flex;
+      display: inline-block;
       flex: 1;
       align-items: center;
       justify-content: space-between;
@@ -132,8 +124,7 @@ export const Header = styled.div`
       }
 
       > ul {
-        display: -webkit-box; 
-        display: flex;
+        display: inline-block;
         flex-wrap: initial;
         align-items: center;
         justify-content: center;
@@ -177,7 +168,6 @@ export const MenuMobile = styled.span`
 
   @media(max-width: 880px) {
     visibility: visible;
-    display: -webkit-box; 
     display: inline-block;
     flex-direction: column;
     align-self: center;
@@ -186,8 +176,7 @@ export const MenuMobile = styled.span`
     width: 92%;
 
     div.burguer {
-      display: -webkit-box; 
-      display: flex;
+      display: inline-block;
       align-items: center;
       justify-content: flex-end;
 
@@ -212,8 +201,7 @@ export const MenuMobile = styled.span`
         width: 100%;
         
         > a {
-          display: -webkit-box; 
-          display: flex;
+          display: inline-block;
           align-items: center;
           justify-content: center;
 
