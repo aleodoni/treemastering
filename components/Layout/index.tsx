@@ -36,7 +36,7 @@ const Layout: React.FC = ({ children }) => {
               </a>
             </Link>
           </div>
-          {/* <div className="menu">
+          <div className="menu">
             <div className="logo">
               <Link href="/">
                 <img src="/images/logo_logo_tree_mastering-site.png" alt="Home" />
@@ -49,7 +49,7 @@ const Layout: React.FC = ({ children }) => {
               </ul>
             </div>
             <img src="/images/tree-banner.jpg" alt="Home" />
-          </div> */}
+          </div>
           <MenuMobile>
             <div className="burguer" onClick={() => handleMenu()}>
               <MdMenu size={30}/>
