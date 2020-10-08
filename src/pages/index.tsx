@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head'
-import Layout from '../components/Layout/index';
+import Layout from '@/components/Layout/index';
 
 const Home: React.FC = () => {
   return (

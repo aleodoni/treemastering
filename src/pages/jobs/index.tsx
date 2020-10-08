@@ -3,13 +3,13 @@ import Head from 'next/head'
 import Link from 'next/link';
 import {format, parseISO} from 'date-fns';
 
-import { formatSlug } from '../../lib/format';
+import { formatSlug } from '@/lib/format';
 
-import Layout from '../../components/Layout';
+import Layout from '@/components/Layout';
 
-import jobs from '../../public/jobs/index.json';
+import jobs from '@jobs/index.json';
 
-import { Container, Job } from '../../components/PagesStyles/Jobs/styles';
+import { Container, Job } from '@/styles/pages/jobs/styles';
 import { GetStaticProps } from 'next';
 
 type Job = {

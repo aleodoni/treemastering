@@ -17,7 +17,14 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"],
+      "@clients/*": ["../public/clients/*"],
+      "@contact/*": ["../public/contact/*"],
+      "@jobs/*": ["../public/jobs/*"]
+    }
   },
   "include": [
     "next-env.d.ts",

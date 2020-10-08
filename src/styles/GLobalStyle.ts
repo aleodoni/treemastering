@@ -1,3 +1,7 @@
+import {createGlobalStyle} from 'styled-components';
+
+export default createGlobalStyle`
+
 * {
   padding: 0;
   margin: 0;
@@ -48,3 +52,4 @@ h1 {
   --color-shwdow: #0d0d0d;
   --max-width: 960px;
 }
+`;

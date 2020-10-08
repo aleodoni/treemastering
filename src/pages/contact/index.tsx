@@ -1,10 +1,10 @@
 import React from 'react';
 import Head from 'next/head'
-import Layout from '../../components/Layout';
+import Layout from '@/components/Layout';
 
-import contacts from '../../public/contact/index.json';
+import contacts from '@contact/index.json';
 
-import { Container } from '../../components/PagesStyles/Contact/styles';
+import { Container } from '@/styles/pages/contact/styles';
 
 const Contact: React.FC = () => {
   return (

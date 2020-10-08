@@ -1,10 +1,10 @@
 import React from 'react';
 import Head from 'next/head'
-import Layout from '../../components/Layout';
+import Layout from '@/components/Layout';
 
-import clients from '../../public/clients/index.json';
+import clients from '@clients/index.json';
 
-import { Container } from '../../components/PagesStyles/Clients/styles';
+import { Container } from '@/styles/pages/clients/styles';
 
 const Clients: React.FC = () => {
   return (

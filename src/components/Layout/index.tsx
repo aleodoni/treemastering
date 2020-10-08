@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from 'react';
 import Link from 'next/link'
-import Head from 'next/head'
 import {FaInstagramSquare, FaFacebookSquare} from 'react-icons/fa';
 import {MdMenu} from 'react-icons/md';
 
@@ -19,9 +18,6 @@ const Layout: React.FC = ({ children }) => {
 
   return (
     <Container>
-      <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet" />
-      </Head>
       <Wrapper>
         <Header>
           <div className="socialMedia">

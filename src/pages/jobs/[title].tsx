@@ -4,13 +4,13 @@ import Link from 'next/link';
 import next, { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
 import {MdShoppingCart, MdChevronLeft, MdChevronRight} from 'react-icons/md'
 
-import { formatSlug } from '../../lib/format';
+import { formatSlug } from '@/lib/format';
 
-import Layout from '../../components/Layout';
+import Layout from '@/components/Layout';
 
-import { Container, JobInfo, Navigation } from '../../components/PagesStyles/Jobs/styles';
+import { Container, JobInfo, Navigation } from '@/styles/pages/jobs/styles';
 
-import jobs from '../../public/jobs/index.json';
+import jobs from '@jobs/index.json';
 import { parseISO, format } from 'date-fns';
 
 
