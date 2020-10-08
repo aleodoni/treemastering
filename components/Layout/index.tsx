@@ -52,6 +52,7 @@ const Layout: React.FC = ({ children }) => {
                 </ul>
               </div>
             </div>
+            <br/>
             <img src="/images/tree-banner.jpg" alt="Home" />
           </div>
         </Header>
