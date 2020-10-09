@@ -209,6 +209,7 @@ export const Navigation = styled.div`
   > a {
     display: flex;
     align-items: center;
+    font-family: 'Ubuntu Condensed';
 
     > svg {
       fill: var(--color-yellow);

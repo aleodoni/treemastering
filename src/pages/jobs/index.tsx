@@ -1,4 +1,9 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
+import { Document } from 'prismic-javascript/types/documents';
+import PrismicDOM from 'prismic-dom';
+import Prismic from 'prismic-javascript';
+import ReactHtmlParser from 'react-html-parser';
+import { GetStaticProps } from 'next';
 import Head from 'next/head'
 import Link from 'next/link';
 import {format, parseISO} from 'date-fns';
@@ -7,27 +12,16 @@ import { formatSlug } from '@/lib/format';
 
 import Layout from '@/components/Layout';
 
-import jobs from '@jobs/index.json';
+import { client } from '@/lib/prismic';
 
 import { Container, Job } from '@/styles/pages/jobs/styles';
-import { GetStaticProps } from 'next';
 
-type Job = {
-  title: string;
-  band: string;
-  releaseDate: string;
-  label: string;
-  img: string;
-  buy: string;
-  titleSlug: string;
-};
-
-interface IProps {
-  header: string;
-  jobs: Job[];
+interface IJob {
+  title: Document;
+  jobs: Document[];
 }
 
-const Jobs: React.FC<IProps> = ({header, jobs}) => {
+export default function Jobs({ title, jobs }: IJob) {
   const generateImg = useCallback((image) => {
     return `/images/${image}`;
   }, [])
@@ -46,21 +40,25 @@ const Jobs: React.FC<IProps> = ({header, jobs}) => {
       </Head>
       <div className="section">
       <Container>
-        <h1>{header}</h1>
+        {ReactHtmlParser(PrismicDOM.RichText.asHtml(title.data.title))}
         <ul>
           { jobs.map((job) => (
-            <div key={job.titleSlug}>
+            <div key={job.uid}>
               <li>
                 <Job>
-                  <Link href={`/jobs/${job.titleSlug}`}>
-                    <img src={generateImg(job.img)} />
+                  <Link href={`/jobs/${job.uid}`}>
+                    <img src={job.data.image.url} />
                   </Link>
                   <div className="info">
-                    <h1>{job.title}</h1>
-                    <span><b>{job.band}</b> - {job.title}</span>
-                    <span><b>Release date:</b> {formatDate(job.releaseDate)}</span>
-                    <span><b>Label:</b> {job.label}</span>
-                    <Link href={`/jobs/${job.titleSlug}`}>Details</Link>
+                    {/* <h1>{job.data.title}</h1> */}
+                    {ReactHtmlParser(PrismicDOM.RichText.asHtml(job.data.title))}
+                    <span>
+                      <b>{ReactHtmlParser(PrismicDOM.RichText.asText(job.data.band))} - </b>
+                      {ReactHtmlParser(PrismicDOM.RichText.asText(job.data.title))}
+                    </span>
+                    <span><b>Release date:</b> {formatDate(job.data.release_date)}</span>
+                    <span><b>Label:</b> {PrismicDOM.RichText.asText(job.data.label)}</span>
+                    <Link href={`/jobs/${job.uid}`}>Details</Link>
                   </div>
                 </Job>
               </li>
@@ -75,21 +73,21 @@ const Jobs: React.FC<IProps> = ({header, jobs}) => {
   );
 }
 
-export default Jobs;
-
 export const getStaticProps: GetStaticProps = async () => {
-  
-  const formattedJobs = jobs.jobs.map(job => {
-    return {
-      ...job,
-      titleSlug: formatSlug(job.title),
-    }
+
+  const title = await client().getSingle('mastering_job_title', {});
+
+  const jobs = await client().query([
+    Prismic.Predicates.at('document.type', 'mastering_job')
+  ], {
+    pageSize: 100, 
+    orderings: '[my.mastering_job.release_date desc]',
   })
 
   return {
     props: {
-      header: jobs.header,
-      jobs: formattedJobs
+      title,
+      jobs: jobs.results
     },
     revalidate: 60,
   }

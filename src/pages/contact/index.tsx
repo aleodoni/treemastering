@@ -1,12 +1,19 @@
-import React from 'react';
 import Head from 'next/head'
+import { Document } from 'prismic-javascript/types/documents';
+import PrismicDOM from 'prismic-dom';
+import ReactHtmlParser from 'react-html-parser';
+import { GetStaticProps } from 'next';
+
 import Layout from '@/components/Layout';
 
-import contacts from '@contact/index.json';
-
 import { Container } from '@/styles/pages/contact/styles';
+import { client } from '@/lib/prismic';
 
-const Contact: React.FC = () => {
+interface IContact {
+  contact: Document;
+}
+
+export default function Contact ({ contact }: IContact) {
   return (
     <Layout>
       <Head>
@@ -14,16 +21,24 @@ const Contact: React.FC = () => {
       </Head>
       <div className="section">
       <Container>
-        <h1>{contacts.header}</h1>
-        <ul>
-          { contacts.info.map((contact) => (
-            <li key={contact.label}>{contact.label}: <a href={contact.link}>{contact.labelLink}</a></li>
-          ))}
-        </ul>
+        <h1>{PrismicDOM.RichText.asText(contact.data.title)}</h1>
+        <div>
+          {ReactHtmlParser(PrismicDOM.RichText.asHtml(contact.data.contact))}
+        </div>
       </Container>
       </div>
     </Layout>
   )
 }
 
-export default Contact;
+export const getStaticProps: GetStaticProps = async () => {
+
+  const contactInfo = await client().getSingle('contact', null);
+
+  return {
+    props: {
+      contact: contactInfo,
+    },
+    revalidate: 60,
+  }
+}

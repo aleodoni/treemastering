@@ -1,48 +1,33 @@
-import React, { useCallback } from 'react';
+import{ useCallback } from 'react';
+import { Document } from 'prismic-javascript/types/documents';
+import PrismicDOM from 'prismic-dom';
+import Prismic from 'prismic-javascript';
+import ReactHtmlParser from 'react-html-parser';
 import Head from 'next/head'
 import Link from 'next/link';
-import next, { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
+import { GetStaticProps, GetStaticPaths } from 'next';
 import {MdShoppingCart, MdChevronLeft, MdChevronRight} from 'react-icons/md'
 
-import { formatSlug } from '@/lib/format';
+import { client } from '@/lib/prismic';
 
 import Layout from '@/components/Layout';
 
 import { Container, JobInfo, Navigation } from '@/styles/pages/jobs/styles';
 
-import jobs from '@jobs/index.json';
 import { parseISO, format } from 'date-fns';
 
-
-type IJobDetails = {
-  title: string;
-  band: string;
-  releaseDate: string;
-  label: string;
-  img: string;
-  buy: string;
-  nextJob: string;
-  formattedDate: string;
-  formattedImg: string;
-  titleSlug: string;
-}
-
 type ILinkJob = {
-  title: string;
-  slug: string;
+  slug?: string;
+  title?: string;
 }
 
 interface IProps {
-  job : IJobDetails,
+  job : Document,
   nextJob: ILinkJob,
   previousJob: ILinkJob,
 }
 
-const JobDetail: React.FC<IProps> = ({job, nextJob, previousJob}) => {
-
-  const generateImg = useCallback((image) => {
-    return `/images/${image}`;
-  }, [])
+export default function JobDetail ({job, nextJob, previousJob} :IProps) {
 
   const formatDate = useCallback((date) => {
     const parsedDate = parseISO(date);
@@ -59,18 +44,21 @@ const JobDetail: React.FC<IProps> = ({job, nextJob, previousJob}) => {
       <div className="section">
       <Container>
         <JobInfo>
-          <h1>{job.title}</h1>
-          <img src={generateImg(job.img)} />
+          {ReactHtmlParser(PrismicDOM.RichText.asHtml(job.data.title))}
+          <img src={job.data.image.url} />
           <div className="info">
-            <Link href={job.buy} passHref>
+            <Link href={job.data.buy.url} passHref>
               <a>
                 <MdShoppingCart size={20}/>
                 Buy Now
               </a>
             </Link>
-            <span><b>{job.band}</b> - {job.title}</span>
-            <span><b>Release date:</b> {formatDate(job.releaseDate)}</span>
-            <span><b>Label:</b> {job.label}</span>
+            <span>
+              <b>{ReactHtmlParser(PrismicDOM.RichText.asText(job.data.band))} - </b>
+              {ReactHtmlParser(PrismicDOM.RichText.asText(job.data.title))}
+            </span>
+            <span><b>Release date:</b> {formatDate(job.data.release_date)}</span>
+            <span><b>Label:</b> {PrismicDOM.RichText.asText(job.data.label)}</span>
           </div>
         </JobInfo>
         <Navigation>
@@ -98,31 +86,31 @@ const JobDetail: React.FC<IProps> = ({job, nextJob, previousJob}) => {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const {title} = context.params;
+  const { slug } = context.params;
 
-  const formattedJobs = jobs.jobs.map(job => {
-    return {
-      ...job,
-      titleSlug: formatSlug(job.title),
-    }
+  const jobs = await client().query([
+    Prismic.Predicates.at('document.type', 'mastering_job')
+  ], {
+    pageSize: 100, 
+    orderings: '[my.mastering_job.release_date desc]',
   })
 
-  const indexJob = formattedJobs.findIndex(job => (job.titleSlug === title));
-  const selectedJob = formattedJobs[indexJob];
+  const indexJob = jobs.results.findIndex(job => (job.uid === slug));
+  const selectedJob = jobs.results[indexJob];
 
   let nextJob: ILinkJob | null = {slug: '', title: ''};
   let previousJob: ILinkJob | null = {slug: '', title: ''};
 
-  if (indexJob < formattedJobs.length - 1) {
-    nextJob.slug = formattedJobs[indexJob + 1].titleSlug;
-    nextJob.title =  formattedJobs[indexJob + 1].title;
+  if (indexJob < jobs.results.length - 1) {
+    nextJob.slug = jobs.results[indexJob + 1].uid;
+    nextJob.title =  PrismicDOM.RichText.asText(jobs.results[indexJob + 1].data.title);
   } else {
     nextJob = null;
   }
 
   if (indexJob > 0) {
-    previousJob.slug = formattedJobs[indexJob - 1].titleSlug;
-    previousJob.title =  formattedJobs[indexJob - 1].title;
+    previousJob.slug = jobs.results[indexJob - 1].uid;
+    previousJob.title =  PrismicDOM.RichText.asText(jobs.results[indexJob - 1].data.title);
   } else {
     previousJob = null;
   }
@@ -139,8 +127,15 @@ export const getStaticProps: GetStaticProps = async (context) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const jobTitles = jobs.jobs.map(job => {
-    return { params: { title: formatSlug(job.title) } }
+  const jobs = await client().query([
+    Prismic.Predicates.at('document.type', 'mastering_job')
+  ], {
+    pageSize: 100, 
+    orderings: '[my.mastering_job.release_date desc]',
+  })
+
+  const jobTitles = jobs.results.map(job => {
+    return { params: { slug: job.uid } }
   });
 
   return  {
@@ -148,5 +143,3 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   }
 }
-
-export default JobDetail;
