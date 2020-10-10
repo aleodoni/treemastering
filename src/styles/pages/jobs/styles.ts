@@ -98,12 +98,9 @@ export const Job = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      /* align-self: flex-start; */
       
       max-width: 200px;
       width: 100%;
-
-      /* margin: 10px; */
 
       @media(max-width: 880px) {
         margin: 10px auto;
