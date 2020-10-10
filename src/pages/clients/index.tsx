@@ -11,7 +11,7 @@ import { client } from '@/lib/prismic';
 import { Container } from '@/styles/pages/clients/styles';
 
 interface IClient {
-  clients: Document;
+  clients: Document; 
 }
 
 export default function Clients({ clients }: IClient) {
