@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import { Document } from 'prismic-javascript/types/documents';
 import PrismicDOM from 'prismic-dom';
 import ReactHtmlParser from 'react-html-parser';
